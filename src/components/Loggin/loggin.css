@@ -1,0 +1,36 @@
+
+.loggin-container{
+
+       background-color: white;
+       width: 70%;
+       margin:auto;
+       margin-top:1rem;
+      
+       border-radius: 10px;
+box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.loggin-container form{
+    margin:2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+ 
+}
+
+.loggin-container input {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+         }
+
+.fehlermeldung {
+text-align: center;
+    color:red;
+    margin-bottom: 1rem;
+}

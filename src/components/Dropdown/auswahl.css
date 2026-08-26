@@ -1,0 +1,28 @@
+
+
+
+.selectcontainer {
+  
+    
+    margin-top: 2rem;
+    text-align: center;
+   
+}
+.selectcontainer select{
+    width: 50%;
+    margin:auto;
+     max-width: 300px;  /* Feste maximale Breite */
+    min-width: 150px;  /* Minimale Breite */
+    font-size: large;
+    border: 3px solid var(--color-primary);
+    border-radius:8px;
+    display:block;
+}
+
+.selectcontainer option{
+    text-align: center;
+    font-size: small;
+   
+}
+
+

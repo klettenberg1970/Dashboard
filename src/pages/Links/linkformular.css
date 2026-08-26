@@ -1,0 +1,90 @@
+.linkformular {
+    width: clamp(200px, 80%, 1200px);
+    margin: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.radiobuttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var(--color-secondary);
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.kategorien {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.linkformular hr {
+    border: none;
+    border-top: 3px solid var(--color-primary);
+    margin: 20px 0;
+}
+
+.linksname,
+.linkurl {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.linkformular label {
+    padding: 5px 0;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.linkformular input[type="text"],
+.linkformular input[type="url"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.linkformular input[type="radio"] {
+    margin-right: 8px;
+}
+
+.kategorien input[type="text"] {
+    width: 200px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+@media (max-width: 800px) {
+    .kategorien {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .kategorien input[type="text"] {
+        width: 100%;
+    }
+    
+    .linkformular {
+        padding: 15px;
+    }
+    
+    .linkformular button {
+        width: 100%;
+        align-self: center;
+    }
+}

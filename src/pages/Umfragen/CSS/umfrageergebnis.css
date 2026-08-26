@@ -1,0 +1,36 @@
+.ergebnisse {
+  margin-top: 2rem;
+    display: flex;
+    justify-content:space-around;
+    gap: 10px;
+    /* Abstand zwischen Text und Torte */
+}
+
+.ergebnistext {
+    flex: 1;
+    border: 1px solid white;
+    padding:0.5rem;
+}
+
+.ergebnistext p {
+    padding: 0.5rem;
+    color:white;
+}
+
+.tortencontainer {
+    flex: 4;
+    background-color: white;
+    width: 50%;
+}
+
+
+.tortencontainer canvas {
+
+    width: 100%;
+    height: 500px;
+    
+    padding: 0;
+    margin: 0;
+    border: none;
+    display: block;
+}

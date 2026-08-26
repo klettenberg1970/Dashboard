@@ -1,0 +1,84 @@
+.linkcontainer {
+    width: 80%;
+    margin: auto;
+}
+
+.linkcontainer hr {
+    color: var(--color-primary);
+    width: 80%;
+    margin: auto;
+    border-top: 3px solid; /* Oder 4px, 5px usw. */
+    
+}
+
+
+.linkcard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    width: 80%;
+    margin: auto;
+    margin-top: 1rem;
+    background-color: transparent; 
+    margin-bottom: 1rem;
+}
+
+.linkcard > div {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.linkcard h3 {
+    color:white;
+    background :var(--color-secondary);
+    text-align:center;
+    padding:5px;
+   
+}
+
+.linkcard a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    padding: 0.5rem 0;
+    display: block; /* Links untereinander anzeigen */
+}
+
+.linkcard a:hover {
+    background-color:var(--color-secondary);
+    color:white;
+}
+
+.linkname {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.linkname button {
+border:none;
+background-color: white;
+color:var(--color-danger);
+cursor: pointer;
+}
+
+.linkbuttons {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+
+@media (max-width: 800px) {
+    .linkcard {
+        display: block;
+    }
+    .linkcard > div {
+        margin-bottom: 1rem; /* Abstand zwischen den Kategorien im Block-Layout */
+    }
+}

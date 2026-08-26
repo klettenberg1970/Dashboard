@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
+:root {
+  --color-primary: #334466;
+  --color-secondary: #3498db;
+  --color-success: #2ecc71;
+  --color-danger: #e74c3c;
+  --color-text: #333;
+  --color-background: lightslategray;;
+  --color-white: #ffffff;
+}
+
+
+body {
+  /* background-color: var(--color-background); */
+  background: linear-gradient( to right, #77a0bb, #58a, #1a3d57);
+
+
+  color: var(--color-primary);
+  font-family: Arial, sans-serif;
+
+}
+
+
+.app-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+}

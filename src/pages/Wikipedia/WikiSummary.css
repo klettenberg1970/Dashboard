@@ -1,0 +1,86 @@
+.wiki-summary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 100%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+.wiki-summary-container form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.wiki-summary-container input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.wiki-summary-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.wiki-summary-container button:hover {
+    background-color: #0056b3;
+}
+
+
+.wiki-ausgabe-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wiki-ausgabe-container img {
+    border: 2px solid white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    /* maximale Breite */
+    height: auto;
+    margin: 1rem 0;
+    /* oben/unten: 1rem, links/rechts: 0 */
+    object-fit: contain;
+}
+
+
+.wiki-ausgabe-container p {
+
+    padding: 0.5rem;
+    line-height: 1.6;
+       align-self: flex-start;
+       color:white;
+    
+}
+
+
+.wiki-ausgabe-container a {
+    margin-top: 1rem;
+    color: white;
+}
+
+.wiki-summary-container pre {
+    font-size: small;
+    white-space: pre-wrap;
+    /* Ermöglicht Zeilenumbrüche */
+    word-wrap: break-word;
+    /* Bricht lange Wörter um */
+    overflow-wrap: break-word;
+    /* Moderne Alternative zu word-wrap */
+    max-width: 100%;
+    /* Verhindert Überlauf */
+}

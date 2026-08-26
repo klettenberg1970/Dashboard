@@ -1,0 +1,85 @@
+
+.foto-container{
+background-color: white;
+
+}
+.show-container{
+   
+  display: grid;
+ grid-template-columns: repeat(4, 1fr); /* Deine 5 Spalten */
+    gap: 1rem;
+    padding:1rem;
+}
+
+@media  (max-width: 800px) {
+  .show-container{
+    display:flex;
+    flex-direction: column;
+   
+    align-items: center;
+  }
+}
+
+.foto-img {
+ max-width: 400px;  /* Nur maximale Größe begrenzen */
+  max-height: 400px;
+  object-fit: cover;
+  border: 1px solid black;
+  padding:1rem;
+}
+
+/* Für Mobil etwas kleiner */
+@media (max-width: 800px) {
+  .foto-img {
+   
+  max-width: 350px;  /* Nur maximale Größe begrenzen */
+  max-height: 350px;
+  }
+}
+
+
+.foto-edit-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+     width: 100vw;      /* 100% der Bildschirmbreite */
+  height: 100vh; 
+    background-color: rgba(0,0,0,0.9);
+     display: flex;
+     flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    z-index: 999;
+}
+
+.foto-edit-img{
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  cursor: pointer;
+  padding:1rem;
+  border:1px solid white;
+
+
+}
+
+.foto-edit-buttoncontainer{
+width: 50%;
+  padding:1rem;
+  margin: 1rem;
+  display:flex;
+  justify-content:space-around;
+  
+}
+
+.foto-edit-buttoncontainer button{
+
+  background-color: black;
+  color:white;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding:0.5rem;
+
+
+
+}

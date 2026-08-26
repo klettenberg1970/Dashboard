@@ -1,0 +1,59 @@
+.rsscontainer {
+    width: 80%;
+    margin: auto;
+}
+
+.selectcontainer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.selectcontainer select {
+    width: 100%;
+    height: 2rem;
+
+    font-size: medium;
+    border: 3px solid var(--color-primary);
+}
+
+.selectcontainer option {
+    text-align: center;
+    margin: 1.5rem 1rem 1.5rem 1rem;
+}
+
+
+.feedcard {
+    background-color: white;
+    margin-top: 2rem;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+
+.feeddate {
+    margin-bottom: 0.3rem;
+}
+
+.feedtitle {
+    background-color: var(--color-secondary);
+   
+}
+.feedcard a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight:bold;
+    
+   padding: 0.5rem 0.2rem; /* Nur vertikales Padding, horizontales auf 0 */
+    
+}
+
+.feedcard hr {
+    margin-bottom: 0.5rem;
+}
+
+
+.feedcontent {
+
+ padding: 0.2rem 0.2rem; /* Nur vertikales Padding, horizontales auf 0 */
+   
+}

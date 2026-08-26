@@ -1,0 +1,41 @@
+
+
+.fussball-container {
+  
+    background-color: #f4f4f4;
+    color: var(--primary-color);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+}
+
+
+.torschuetzen-container{
+
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 5px;
+    width: 80%;
+    margin : 1rem auto 1rem;
+}
+
+.torschuetzen-container p{
+    text-align: center;
+}
+
+.torschuetzen-container hr {
+    min-height: 3px;
+    background-color:var(--primary-color);
+}
+
+.spieler {
+    display:flex;
+    justify-content: space-around;
+}
+
+
+
+

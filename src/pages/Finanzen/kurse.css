@@ -1,0 +1,47 @@
+.kurscontainer {
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+.kurskategorie {
+    color: white;
+    background: var(--color-secondary);
+    text-align: center;
+    padding: 5px;
+
+}
+
+.kursausgabe {
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+
+.kursausgabe button {
+    width: 100%;
+    height: 2rem;
+    background-color: white;
+    color: var(--color-primary);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    /* Verteilt den Platz zwischen den Kindern */
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+
+.kursausgabe button:hover {
+
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.preis {
+
+    text-align: end;
+}

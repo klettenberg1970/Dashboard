@@ -1,0 +1,16 @@
+
+.textcontainer {
+   
+    margin-top: 0.5rem;
+    background:white;
+    color: var(--color-primary);
+    
+    border: 2px solid var(--color-primary);
+    
+}
+
+.textcontainer p{
+    padding: 0.2rem;;
+    text-align: center;
+    line-height: 1.5;
+}

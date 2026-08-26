@@ -1,0 +1,27 @@
+.btn {
+    background-color:  var(--color-secondary);
+    color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    /* align-self: flex-start;   */
+}
+
+.btn:hover {
+    background-color: white;
+    color: var(--color-secondary);
+}
+
+.loading {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}

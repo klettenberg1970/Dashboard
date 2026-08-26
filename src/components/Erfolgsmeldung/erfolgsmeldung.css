@@ -1,0 +1,41 @@
+.erfolgsmeldung {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: auto;
+    min-width: 300px;
+    padding: 1rem 1.5rem;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+    animation: slideInRight 0.3s ease-out;
+}
+
+.erfolgsmeldung::before {
+    content: "✓";
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.erfolgsmeldung p {
+    margin: 0;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

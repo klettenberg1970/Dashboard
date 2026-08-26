@@ -1,0 +1,41 @@
+.obsidian-container {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+
+.obsidian-maincard {
+
+    background-color: white;
+    color: #006D87;
+    padding: 1rem;
+    min-width: 80%
+
+}
+
+.obsidian-maincard button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+
+}
+
+
+.ordner-card {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #006D87;
+    border-radius: 5px;
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+
+}

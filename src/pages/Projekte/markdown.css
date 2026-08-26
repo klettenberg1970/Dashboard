@@ -1,0 +1,77 @@
+.markdown-container {
+    position: fixed;
+    top: 3rem;
+    bottom: 1rem;        /* ← 5rem Abstand nach unten */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    z-index: 999;
+    background-color: white;
+    overflow-y: auto;
+    border-radius: 5px;
+}
+
+.markdown-edit{
+
+  display:flex;
+  justify-content: start;
+
+}
+
+.markdown-edit button {
+   background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.markdown{
+  background-color: white;
+  color:var(--color-primary);
+  margin:1rem;
+  border-radius:5px;
+   
+   }
+
+.markdown h1,h2,h3, h4,p , ol,ul,li ,a{
+  padding:1rem;
+}
+
+.markdown h1{
+
+  text-align: center;
+}
+ 
+.markdown a {
+  display: inline-block;  /* ← Das brauchst du */
+  margin: 0.5rem;         /* ← Funktioniert jetzt */
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: blue;
+  text-decoration: underline;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.markdown a:hover {
+  color: darkblue;
+}
+
+.markdown p {
+  white-space: pre-wrap;
+}
+
+.markdown ul,
+.markdown ol {
+  margin-left: 1rem;
+}
+
+.markdown-internerLink{
+
+  color:black;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
