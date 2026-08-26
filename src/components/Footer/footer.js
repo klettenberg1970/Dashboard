@@ -14,7 +14,7 @@ class Footer extends HTMLElement {
             </style>
             
             <div id ='footercontainer'>
-                 <p id ='footer'> &copy;  2026 | Stefan Basten    Köln-Klettenberg |  </p>
+                 <p id ='footer'> &copy;  2026 | Stefan Basten  |  Köln-Klettenberg |  </p>
             </div>
            
             `;
