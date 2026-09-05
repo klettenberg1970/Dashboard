@@ -46,5 +46,11 @@ export class OpenLiga {
     return daten;
   }
 
-}
+  async aktuellerSpieltagId(liga){
+     const response = await fetch(`${this.url}/getcurrentgroup/${liga}`);
+    const daten = await response.json();
+    
+    return daten.groupOrderID;
+  }
 
+}

@@ -12,33 +12,45 @@ const API = import.meta.env.VITE_API_URL;
 const jahr = 2026;
 
 export default function Fussball() {
+
+  if (baustelle) {
+        return <UnderConstruction />;
+    }
     const [tabelle, setTabelle] = useState([]);
     const [goalgetter, setGoalgetter] = useState([]);
     const [spieltag, setSpieltag] = useState([]);
-    
+    const [aktuellerSpieltag, setAktuellerSpieltag] = useState([]);
 
-   const fetchLigaDaten = async (ligaKuerzel,spieltagNummer=1) => {
-    const openLiga = new OpenLiga();
-    const [tabellenData, goalgetterData,spieltagData] = await Promise.all([
-        openLiga.ligaTabelle(ligaKuerzel, jahr),
-        openLiga.torschuetzen(ligaKuerzel, jahr),
-        openLiga.spieltag(ligaKuerzel, jahr, spieltagNummer)
+    const fetchAktuellerSpieltag = async (ligaKuerzel) => {
+        const openLiga = new OpenLiga();
+        const aktuelleID = await openLiga.aktuellerSpieltagId(ligaKuerzel);
+        setAktuellerSpieltag(aktuelleID);
+        return aktuelleID;
+    };
+
+    const fetchLigaDaten = async (ligaKuerzel) => {
         
-    ]);
-    setTabelle(tabellenData);
-    setGoalgetter(goalgetterData);
-    setSpieltag(spieltagData);
-    
-};
+        const openLiga = new OpenLiga();
 
-    if (baustelle) {
-        return <UnderConstruction />;
-    }
+        // aktuelle Spieltag-ID für die ausgewählte Liga holen
+        const spieltagNummer = await fetchAktuellerSpieltag(ligaKuerzel);
+        
 
-   useEffect(() => {
-    fetchLigaDaten("bl1",1);
-    
-}, []);
+        const [tabellenData, goalgetterData, spieltagData] = await Promise.all([
+            openLiga.ligaTabelle(ligaKuerzel, jahr),
+            openLiga.torschuetzen(ligaKuerzel, jahr),
+            openLiga.spieltag(ligaKuerzel, jahr, spieltagNummer),
+        ]);
+
+        setTabelle(tabellenData);
+        setGoalgetter(goalgetterData);
+        setSpieltag(spieltagData);
+    };
+
+  
+    useEffect(() => {
+        fetchLigaDaten("bl1");
+    }, []);
 
     const handleLigaAuswahl = (eingabe) => {
         fetchLigaDaten(eingabe);
@@ -47,9 +59,10 @@ export default function Fussball() {
     return (
         <div className='fussball-container app-container'>
             <SelectLiga onSelect={handleLigaAuswahl} />
+             <Spieltag spieltag={spieltag} />
             <LigaTabelle tabelle={tabelle} />
             <Torschuetzen goalgetter={goalgetter} />
-            <Spieltag spieltag={spieltag} />
+           
         </div>
     );
 }

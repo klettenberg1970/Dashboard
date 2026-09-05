@@ -3,6 +3,7 @@ import './CSS/spieltag.css'
 
 
 export default function Spieltag({ spieltag }) {
+ 
   const spieltagArray = spieltagFormat(spieltag);
 
   return (

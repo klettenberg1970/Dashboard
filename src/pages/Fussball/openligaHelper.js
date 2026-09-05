@@ -1,23 +1,23 @@
 
 
 export const spieltagFormat = (spielDaten) => {
-  
+  console.log(spielDaten)
   let spieltagArray =[]
   // Maximale Länge für linken Team-Namen finden
   let maxLeft = 0;
   for (let match of spielDaten) {
-    maxLeft = Math.max(maxLeft, match.team1.teamName.length);
+    maxLeft = Math.max(maxLeft, match.team1.shortName.length);
   }
   
   // Maximale Länge für rechten Team-Namen finden
   let maxRight = 0;
   for (let match of spielDaten) {
-    maxRight = Math.max(maxRight, match.team2.teamName.length);
+    maxRight = Math.max(maxRight, match.team2.shortName.length);
   }
 
   for (let match of spielDaten) {
-    let team1 = match.team1.teamName.padEnd(maxLeft);
-    let team2 = match.team2.teamName.padEnd(maxRight);
+    let team1 = (match.team1.shortName || match.team1.teamName).padEnd(maxLeft);
+let team2 = (match.team2.shortName || match.team2.teamName).padEnd(maxRight);
     
     if (match.matchIsFinished) {
       let tore1 = match.matchResults[1].pointsTeam1;
