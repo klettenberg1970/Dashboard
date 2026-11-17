@@ -15,7 +15,7 @@ export default function KontakteShow() {
 
      useEffect(() => {
     const fetchKontakte = async () => {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/kontakte`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/kontakte`);
       const data = await response.json();
       setKontakte(data.kontakte);
       

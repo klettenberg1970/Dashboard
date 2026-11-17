@@ -13,7 +13,7 @@ export default function KontakteInput() {
 
     useEffect(() => {
         const fetchNextId = async () => {
-            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/kontakte/next-id`);
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/kontakte/next-id`);
             const data = await response.json();
             setNeueId(data.neueId);
         };
@@ -30,7 +30,7 @@ export default function KontakteInput() {
             kontaktData[key] = value;  // Auch leere Werte werden übernommen
         }
 
-        const response = await fetch(`${API}/api/kontakte/create`, {
+        const response = await fetch(`${API}/api/v1/kontakte/create`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(kontaktData),

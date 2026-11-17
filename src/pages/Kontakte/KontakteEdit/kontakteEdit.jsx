@@ -17,7 +17,7 @@ export default function KontakteEdit() {
         const gewaehlteID = formData.get("id");
         console.log(`Gewählte ID: ${gewaehlteID}`);
         
-        const response = await fetch(`${API}/api/kontakte/${gewaehlteID}`);
+        const response = await fetch(`${API}/api/v1/kontakte/${gewaehlteID}`);
         const data = await response.json();
         
         if (data && data.id) {
@@ -30,7 +30,7 @@ export default function KontakteEdit() {
 
    const handleUpdate = async (updatedKontakt) => {
     console.log("Aktualisierte Kontaktdaten:", updatedKontakt);
-    const response = await fetch(`${API}/api/kontakte/${updatedKontakt.id}`, {
+    const response = await fetch(`${API}/api/v1/kontakte/${updatedKontakt.id}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ export default function KontakteEdit() {
 };
 
     const handleDelete = async () => {
-        const response = await fetch(`${API}/api/kontakte/${kontakt.id}`, {
+        const response = await fetch(`${API}/api/v1/kontakte/${kontakt.id}`, {
             method: 'DELETE'
         });
         const data = await response.json();
